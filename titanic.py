@@ -63,18 +63,19 @@ def parse_args():
 
 
 def main(args):
-    Xy = load_data(args.train)
-    X, y = split_feature_label(Xy)
-    X = transform(X)
-    model = train_model(X, y)
+    Xy_train = load_data(args.train)
+    X_train, y_train = split_feature_label(Xy_train)
+    X_train = transform(X_train)
+    model = train_model(X_train, y_train)
 
-    X = load_data(args.test)
-    passenger_ids = X['PassengerId']
-    X = transform(X)
-    y = model.predict(X)
+    X_test = load_data(args.test)
+    passenger_ids = X_test['PassengerId']
+    X_test = transform(X_test)
+    y_test = model.predict(X_test)
+
     submission = {
         'PassengerId': passenger_ids,
-        'Survived': y
+        'Survived': y_test
     }
     submission = pd.DataFrame(submission)
     submission.to_csv('submission.csv', index=False)
