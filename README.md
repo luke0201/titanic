@@ -21,7 +21,7 @@ Then run `titanic.py` as follows.
 python titanic.py
 ```
 
-Finally, submit the result using the following command. Replace the `submission_message` by yours.
+Finally, submit the result using the following command. Replace the `<submission_message>` by yours.
 
 ```
 kaggle competitions submit -c titanic -f submission.csv -m <submission_message>
