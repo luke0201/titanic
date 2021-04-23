@@ -17,6 +17,7 @@ def load_data(path):
 def split_feature_label(Xy):
     y = Xy['Survived']
     X = Xy.drop('Survived', axis=1, inplace=False)
+
     return X, y
 
 
