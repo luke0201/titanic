@@ -1,4 +1,4 @@
-# Titanic Competition
+# Titanic - Machine Learning from Disaster
 
 This is my Kaggle submission code.
 
