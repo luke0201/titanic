@@ -6,6 +6,11 @@ This is my Kaggle submission code.
 
 You need Python 3.6 or higher version.
 
+The following libraries are required.
+
+- pandas
+- scikit-learn
+
 ## Usage
 
 Download the dataset using the following command.
